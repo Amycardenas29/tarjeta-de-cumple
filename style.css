@@ -10,17 +10,21 @@ body {
     background-color: #121212;
     font-family: 'Arial', sans-serif;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
     position: relative;
+    min-height: 100vh;
+    padding: 50px 20px;
+    overflow-x: hidden;
+}
+
+/* Contenedor opcional para centrar el contenido */
+.contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* Fondo de estrellas */
 .fondo-estrellas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -28,6 +32,7 @@ body {
     background: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png') repeat;
     animation: fondoEstrellas 30s linear infinite;
     opacity: 0.1;
+    z-index: 0;
 }
 
 @keyframes fondoEstrellas {
@@ -46,11 +51,11 @@ body {
     padding: 50px;
     text-align: center;
     max-width: 700px;
-    width: 80%;
+    width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     z-index: 2;
     position: relative;
-    opacity: 1; /* Siempre visible desde el principio */
+    margin: 0 auto;
 }
 
 /* Título */
@@ -69,8 +74,8 @@ p {
     line-height: 1.6;
     margin-top: 20px;
     margin-bottom: 20px;
-    opacity: 0; /* Los párrafos empiezan invisibles */
-    transition: opacity 1s ease-in-out; /* Animación de opacidad */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 /* Animación especial para el último párrafo */
@@ -109,8 +114,9 @@ p {
     }
 }
 
+/* Botón de confeti */
 #botonConfeti {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 30px;
     padding: 12px 20px;
