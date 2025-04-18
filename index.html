@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Andrés Care Pez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fondo-estrellas"></div>
+    <div class="corazones"></div>
+    <button id="botonConfeti">🎉 Sorpresa 🎉</button>
+
+    <div class="carta">
+        <h1>¡Feliz Cumpleaños Andrés Care Pez! 🎉</h1>
+        <p>Hoy no es un día cualquiera... hoy el mundo celebra tu existencia, y yo tengo la suerte de ser parte de tu historia.</p>
+        <p>Gracias por ser esa persona que, con solo una sonrisa, puede cambiarle el color a cualquier día gris. Tu risa, tu forma de ver el mundo, tu manera de estar presente, incluso en los momentos más simples... todo eso te hace único.</p>
+        <p>En esta carta no solo quiero desearte un feliz cumpleaños, sino también recordarte cuánto vales. Eres una de esas personas que se convierten en hogar, que abrazan sin tocar, que dejan huella sin siquiera notarlo.</p>
+        <p>Que este nuevo año te regale sueños cumplidos, abrazos inesperados, momentos que te hagan sonreír sin razón y personas que te amen sin medida.</p>
+        <p>Si alguna vez dudas de lo importante que eres, vuelve a leer estas palabras. Porque yo te veo, te admiro, y te celebro. Hoy y siempre. 💛</p>
+        <p class="final" style="margin-top: 30px; font-weight: bold;">
+            ¡Feliz vuelta al sol!<br>
+            Con cariño, Ale 💫
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="corazones.js"></script>
+    <audio id="musicaFondo" autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        document.getElementById("botonConfeti").addEventListener("click", () => {
+            confetti({
+                particleCount: 150,
+                spread: 100,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+</body>
+</html>
