@@ -1,22 +1,21 @@
-/* Resetear márgenes */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo general */
+/* Body */
 body {
     background-color: #121212;
     font-family: 'Arial', sans-serif;
     color: #fff;
-    position: relative;
     min-height: 100vh;
-    padding: 50px 20px;
+    padding: 30px 15px 100px; /* espacio inferior extra para evitar que el botón tape texto */
     overflow-x: hidden;
 }
 
-/* Contenedor opcional para centrar el contenido */
+/* Contenedor */
 .contenedor {
     max-width: 1000px;
     margin: 0 auto;
@@ -36,19 +35,15 @@ body {
 }
 
 @keyframes fondoEstrellas {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
 
 /* Carta */
 .carta {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 50px;
+    padding: 40px 20px;
     text-align: center;
     max-width: 700px;
     width: 100%;
@@ -60,7 +55,7 @@ body {
 
 /* Título */
 h1 {
-    font-size: 2.8em;
+    font-size: 2em;
     color: #ff0000;
     margin-bottom: 20px;
     font-weight: bold;
@@ -69,7 +64,7 @@ h1 {
 
 /* Párrafos */
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #fff;
     line-height: 1.6;
     margin-top: 20px;
@@ -78,7 +73,7 @@ p {
     transition: opacity 1s ease-in-out;
 }
 
-/* Animación especial para el último párrafo */
+/* Último párrafo animado */
 .final {
     animation: latido 1s ease-in-out infinite alternate;
 }
@@ -117,20 +112,43 @@ p {
 /* Botón de confeti */
 #botonConfeti {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 12px 20px;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
     background: #ff0000;
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    z-index: 200;
+    z-index: 2000;
     transition: transform 0.3s;
 }
 
 #botonConfeti:hover {
     transform: scale(1.1);
 }
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .carta {
+        padding: 30px 15px;
+    }
+
+    #botonConfeti {
+        font-size: 0.9em;
+        padding: 8px 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
